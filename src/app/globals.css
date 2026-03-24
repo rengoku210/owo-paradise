@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass: rgba(18, 8, 32, 0.55);
+  --glass-border: rgba(255, 75, 212, 0.22);
+  --cursor-size: 28px;
+}
+
+/* Lenis drives smooth scrolling — keep native behavior neutral */
+html {
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply text-white antialiased;
+  background-color: #070510;
+  background-image: radial-gradient(
+      ellipse 120% 80% at 50% -30%,
+      rgba(179, 102, 255, 0.14),
+      transparent
+    ),
+    radial-gradient(ellipse 80% 50% at 100% 20%, rgba(92, 243, 255, 0.045), transparent),
+    linear-gradient(180deg, #070510 0%, #0d0618 48%, #070510 100%);
+  min-height: 100vh;
+}
+
+/* Custom cursor: hide system cursor on fine pointers unless user prefers reduced motion */
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .use-custom-cursor,
+  .use-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-white/10 backdrop-blur-xl;
+  background: var(--glass);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    120deg,
+    #ff9fe5 0%,
+    #ff4bd4 25%,
+    #b366ff 55%,
+    #5cf3ff 100%
+  );
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(255, 75, 212, 0.35), 0 0 40px rgba(255, 75, 212, 0.25),
+    0 0 80px rgba(179, 102, 255, 0.15);
+}
