@@ -69,7 +69,7 @@ export function ParticleField() {
         if (p.y < 0) p.y = h;
         if (p.y > h) p.y = 0;
         ctx.beginPath();
-        ctx.fillStyle = `rgba(255, 140, 220, ${p.a})`;
+        ctx.fillStyle = `rgba(212, 175, 55, ${p.a})`;
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       }

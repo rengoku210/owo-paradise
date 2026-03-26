@@ -9,12 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        night: "#0a0612",
-        ink: "#12081f",
+        night: "#080a0f",
+        ink: "#0d1117",
         neon: {
           pink: "#ff4bd4",
           purple: "#b366ff",
           cyan: "#5cf3ff",
+        },
+        empire: {
+          gold: "#d4af37",
+          bronze: "#9c7a2d",
+          pearl: "#f5e6ba",
         },
       },
       fontFamily: {
@@ -23,11 +28,10 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-glow":
-          "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255,75,212,0.25), transparent), radial-gradient(ellipse 60% 40% at 100% 50%, rgba(92,243,255,0.08), transparent)",
+          "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212,175,55,0.2), transparent), radial-gradient(ellipse 60% 40% at 100% 50%, rgba(245,230,186,0.1), transparent)",
       },
       boxShadow: {
-        glow: "0 0 40px rgba(255, 75, 212, 0.35), 0 0 80px rgba(179, 102, 255, 0.2)",
-        "glow-cyan": "0 0 30px rgba(92, 243, 255, 0.4)",
+        glow: "0 0 40px rgba(212, 175, 55, 0.35), 0 0 80px rgba(156, 122, 45, 0.2)",
       },
       animation: {
         float: "float 6s ease-in-out infinite",

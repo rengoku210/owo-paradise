@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --glass: rgba(18, 8, 32, 0.55);
-  --glass-border: rgba(255, 75, 212, 0.22);
+  --glass: rgba(16, 16, 20, 0.58);
+  --glass-border: rgba(212, 175, 55, 0.24);
   --cursor-size: 28px;
 }
 
-/* Lenis drives smooth scrolling — keep native behavior neutral */
 html {
   scroll-behavior: auto;
 }
@@ -21,18 +20,17 @@ html {
 
 body {
   @apply text-white antialiased;
-  background-color: #070510;
+  background-color: #07080d;
   background-image: radial-gradient(
       ellipse 120% 80% at 50% -30%,
-      rgba(179, 102, 255, 0.14),
+      rgba(212, 175, 55, 0.14),
       transparent
     ),
-    radial-gradient(ellipse 80% 50% at 100% 20%, rgba(92, 243, 255, 0.045), transparent),
-    linear-gradient(180deg, #070510 0%, #0d0618 48%, #070510 100%);
+    radial-gradient(ellipse 80% 50% at 100% 20%, rgba(201, 160, 74, 0.07), transparent),
+    linear-gradient(180deg, #07080d 0%, #0c0f14 48%, #07080d 100%);
   min-height: 100vh;
 }
 
-/* Custom cursor: hide system cursor on fine pointers unless user prefers reduced motion */
 @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .use-custom-cursor,
   .use-custom-cursor * {
@@ -43,22 +41,31 @@ body {
 .glass-panel {
   @apply rounded-3xl border border-white/10 backdrop-blur-xl;
   background: var(--glass);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset,
-    0 20px 60px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 24px 70px rgba(0, 0, 0, 0.5);
 }
 
 .text-gradient {
   @apply bg-clip-text text-transparent;
-  background-image: linear-gradient(
-    120deg,
-    #ff9fe5 0%,
-    #ff4bd4 25%,
-    #b366ff 55%,
-    #5cf3ff 100%
-  );
+  background-image: linear-gradient(120deg, #f9e2a7 0%, #d4af37 38%, #f5d77e 68%, #fff2c2 100%);
 }
 
 .glow-ring {
-  box-shadow: 0 0 0 1px rgba(255, 75, 212, 0.35), 0 0 40px rgba(255, 75, 212, 0.25),
-    0 0 80px rgba(179, 102, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.34), 0 0 40px rgba(212, 175, 55, 0.22),
+    0 0 80px rgba(153, 120, 40, 0.2);
+}
+
+
+.gold-shimmer {
+  background: linear-gradient(120deg, #f5e6ba 0%, #d4af37 40%, #fff2c2 55%, #d4af37 70%, #f5e6ba 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldShimmer 2.4s linear infinite;
+}
+
+@keyframes goldShimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -20% 0; }
 }

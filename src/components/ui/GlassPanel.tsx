@@ -7,7 +7,5 @@ export function GlassPanel({
   className?: string;
   children: React.ReactNode;
 }) {
-  return (
-    <div className={cn("glass-panel border-neon-pink/15", className)}>{children}</div>
-  );
+  return <div className={cn("glass-panel border-empire-gold/20", className)}>{children}</div>;
 }
