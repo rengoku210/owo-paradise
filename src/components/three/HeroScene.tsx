@@ -91,15 +91,15 @@ function SoftAccents({ dense }: { dense: boolean }) {
   const mats = useMemo(
     () => ({
       purple: new THREE.MeshStandardMaterial({
-        color: "#b366ff",
-        emissive: "#7c3aed",
+        color: "#d4af37",
+        emissive: "#9c7a2d",
         emissiveIntensity: 0.35,
         roughness: 0.45,
         metalness: 0.25,
       }),
       cyan: new THREE.MeshStandardMaterial({
-        color: "#5cf3ff",
-        emissive: "#22d3ee",
+        color: "#f5e6ba",
+        emissive: "#d4af37",
         emissiveIntensity: 0.38,
         roughness: 0.38,
         metalness: 0.3,
@@ -144,17 +144,17 @@ function SceneContent({
   const { gl, scene } = useThree();
 
   useEffect(() => {
-    scene.fog = new THREE.FogExp2("#0a0612", dense ? 0.055 : 0.042);
-    gl.setClearColor("#0a0612", 1);
+    scene.fog = new THREE.FogExp2("#080a0f", dense ? 0.055 : 0.042);
+    gl.setClearColor("#080a0f", 1);
   }, [gl, scene, dense]);
 
   return (
     <>
       <CameraScrollRig scrollRef={scrollRef} />
       <ambientLight intensity={0.32} />
-      <directionalLight position={[4, 6, 2]} intensity={0.95} color="#fae8ff" />
-      <pointLight position={[-3, 1.5, 1.5]} intensity={0.85} color="#ff4bd4" />
-      <pointLight position={[2.5, -0.8, 1]} intensity={0.7} color="#5cf3ff" />
+      <directionalLight position={[4, 6, 2]} intensity={0.95} color="#f5e6ba" />
+      <pointLight position={[-3, 1.5, 1.5]} intensity={0.85} color="#d4af37" />
+      <pointLight position={[2.5, -0.8, 1]} intensity={0.7} color="#f5e6ba" />
       <StarfieldParallax scrollRef={scrollRef} dense={dense} />
       <ParallaxRig mouse={mouse} scrollRef={scrollRef}>
         <SoftAccents dense={dense} />
@@ -164,7 +164,7 @@ function SceneContent({
           size={1.6}
           speed={0.18}
           opacity={0.42}
-          color="#ffc8ef"
+          color="#f5e6ba"
         />
       </ParallaxRig>
     </>

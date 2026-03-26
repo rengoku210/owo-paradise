@@ -36,7 +36,7 @@ export function ParallaxBackdrop() {
       aria-hidden
     >
       <ParticleField />
-      <div className="absolute inset-0 bg-gradient-to-b from-neon-purple/[0.07] via-transparent to-neon-pink/[0.05]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-empire-gold/[0.08] via-transparent to-empire-bronze/[0.06]" />
     </div>
   );
 }

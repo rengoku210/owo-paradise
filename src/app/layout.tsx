@@ -21,9 +21,9 @@ const sans = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "OwO Paradise · Discord",
+  title: "Empire Force · Command Server",
   description:
-    "A soft, vibrant anime community — join OwO Paradise on Discord for events, chat, and rewards.",
+    "Empire Force is a dark elite economy command server experience: build, dominate, and earn.",
 };
 
 export default function RootLayout({

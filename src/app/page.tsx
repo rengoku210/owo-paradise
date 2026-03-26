@@ -1,12 +1,13 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DiscordStatsSection } from "@/components/sections/DiscordStatsSection";
+import { PlayerProfileSection } from "@/components/sections/PlayerProfileSection";
 import { ServerPreviewSection } from "@/components/sections/ServerPreviewSection";
 import { StaffSection } from "@/components/sections/StaffSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import { AIChatbot } from "@/components/sections/AIChatbot";
 
-const invite =
-  process.env.NEXT_PUBLIC_DISCORD_INVITE ?? "https://discord.com/channels/@me";
+const invite = "https://discord.gg/959cmX7YJn";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
 
       <div className="relative z-[1] pb-12" style={{ perspective: "1200px" }}>
         <DiscordStatsSection />
+        <PlayerProfileSection />
         <ServerPreviewSection />
         <StaffSection />
         <FeaturesSection />
@@ -22,17 +24,14 @@ export default function Home() {
       </div>
 
       <footer className="relative z-[35] border-t border-white/10 bg-night/90 px-6 py-10 text-center text-sm text-white/50 backdrop-blur-md">
-        <p className="font-display text-base font-semibold text-white/80">OwO Paradise</p>
-        <p className="mt-2 max-w-md mx-auto">
-          Fan-made showcase layout — not affiliated with Discord.
-        </p>
-        <a
-          href={invite}
-          className="mt-3 inline-block text-neon-cyan/90 hover:text-white transition"
-        >
-          Join the server
+        <p className="font-display text-base font-semibold text-empire-pearl">Empire Force</p>
+        <p className="mx-auto mt-2 max-w-md">Elite economy command server concept interface.</p>
+        <a href={invite} className="mt-3 inline-block text-empire-gold hover:text-white transition">
+          Join Empire Force
         </a>
       </footer>
+
+      <AIChatbot />
     </main>
   );
 }
